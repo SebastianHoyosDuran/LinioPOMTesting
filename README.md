@@ -4,6 +4,15 @@ Este proyecto es realizado con la intención de poner en práctica los conocimie
 ## Importante !
 Linio es una página muy dinámica, con muchos cambios, lo que quiero decir con este es que al día que se desarrolló esta prueba no había ningún mensaje emergente acerca de una promoción o evento, si al momento de realizar esta prueba hay una ventana emergente, muy seguramente dará fallo. También sus productos tienen demasiado movimiento, puede que algún producto de la lista, deje de haber stock, cambie de nombre, cambie de precio. Cualquier cambio en algún producto puede generar falla en la prueba.
 
+### Herramientas
+_Las herramientas empleadas para este proyecto son:_
+* Java
+* Selenium Web Driver
+* POM
+* Cucumber
+* Gherkin
+
+
 ### Requisitos 🔧
 
 _Para este reto, nuestra automatización debía cumplir con los siguientes requisitos:_
