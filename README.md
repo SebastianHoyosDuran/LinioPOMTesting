@@ -40,6 +40,7 @@ Validar el precio final obteniendolo desde el xpath y comparandolo con el valor 
 ### Video Explicativo
 _Antes de continuar, me gustaría añadir que grabé un video explicando la prueba paso a paso y también ejecutándola en tiempo real_
 * [Video](https://youtu.be/XwREPo-XmYg) - Presentación del proyecto
+* [![Alt text](https://img.youtube.com/vi/XwREPo-XmYg/0.jpg)](https://www.youtube.com/watch?v=XwREPo-XmYg)
 
 
 ### Acerca de los pasos que realiza la automatizacion:
@@ -63,12 +64,12 @@ _Si todos los pasos anteriormente mencionados se cumplen sin ningún contratiemp
 
 
 ## Paquetes, Clases y Metodos:
-_A continuacion mostraremos los codigos y de las clases a que paquete pertenencen y cual es su funcion_
+_A continuación mostraremos los códigos y de las clases a que paquete pertenecen y cuál es su función_
 
 ### Paquete Driver
 #### Clase GoogleChromeDriver
 ##### Metodo ChromeDrive
-_Este metodo tiene el parametro String de Url o tambien conocido como link, la intencion de este metodo es abrir el navegador web con unas configuraciones definidas e iniciar el navegador en el link que le pasamos como parametro_
+_Este método tiene el parámetro String de Url o también conocido como link, la intención de este método es abrir el navegador web con unas configuraciones definidas e iniciar el navegador en el link que le pasamos como parámetro_
 ```
 public static void ChromeDriver(String url){
         ChromeOptions options = new ChromeOptions();
@@ -84,9 +85,9 @@ public static void ChromeDriver(String url){
 ### Paquete files
 #### Clase Lectura Excel
 ##### Metodo LecturaExcel
-_Este metodo tiene como fin leer un archivo excel, como parametros acepta dos: String rutaDeExcel y String hojaDeExcel, el parametro rutaDeExcel, se debe indicar que lugar se encuentra el archivo excel que contiene la informacion. Con el parametro hojaDeExcel se da el nombre de la hoja de excel en donde se encuentra la informacion a leer_
+_Este método tiene como fin leer un archivo Excel, como parámetros acepta dos: String rutaDeExcel y String hojaDeExcel, el parámetro rutaDeExcel, se debe indicar que lugar se encuentra el archivo Excel que contiene la información. Con el parámetro hojaDeExcel se da el nombre de la hoja de Excel en donde se encuentra la información a leer_
 
-_Este metodo retorna un la informacion en un Arraylist la cual se debera usar mas adelante_
+_Este método retorna un la información en un Arraylist la cual se deberá usar más adelante_
 
 ```
 
@@ -127,11 +128,11 @@ public class LecturaExcel {
 ```
 
 ### Paquete pages
-_En estas clases que pertenecen al paquete pages , es en donde guardamos los xpath de los elementos que necesitamos como botones, texto y barras de busqueda_
+_En estas clases que pertenecen al paquete pages , es en donde guardamos los xpath de los elementos que necesitamos como botones, texto y barras de búsqueda_
 #### Clase PgInicio
-_En la clase PgInicio tenemos los elementos de La Barra de Busqueda denotado como txtBuscador, el boton de la barra de busqueda denotado como btnBuscador y algunos botones para el manejo de ventanas emergentes_
+_En la clase PgInicio tenemos los elementos de La Barra de Búsqueda denotado como txtBuscador, el botón de la barra de búsqueda denotado como btnBuscador y algunos botones para el manejo de ventanas emergentes_
 
-_Tambien contamos con los metodos get de estos elementos para hacer llamados a estos elementos cuando sean necesarios_
+_También contamos con los métodos get de estos elementos para hacer llamados a estos elementos cuando sean necesarios_
 
 
 ```
@@ -160,7 +161,8 @@ _Tambien contamos con los metodos get de estos elementos para hacer llamados a e
 ```
 
 #### Clase PgCarrito
-_Contamos con los atributos By del boton para abrir el carrito llamado btnAbrirCarrito y con el elemento del texto en donde obtenemos el valor total de los producos y con sus costos adicionales como los son el impueto y costos d envio. Tambien contamos con sus respectivos metodos get para poder hacer llamado a los atributos cuando sea necesario_
+
+_Contamos con los atributos By del botón para abrir el carrito llamado btnAbrirCarrito y con el elemento del texto en donde obtenemos el valor total de los productos y con sus costos adicionales como los son el impuesto y costos de envío. También contamos con sus respectivos métodos get para poder hacer llamado a los atributos cuando sea necesario_
 
 ```
     By btnAbrirCarrito = By.xpath("//span[@class='quantity-icon quantity-icon-notification' and @id='cart-counter']");
@@ -178,9 +180,9 @@ _Contamos con los atributos By del boton para abrir el carrito llamado btnAbrirC
 
 #### Clase PgBusquedaItem
 
-_Esta es la clase que le pertenece a la pagina despues de darle click al boton de lupa , es decir es la pagina en donde nos aparecen todos los productos con el nombre ingresado_
-_En esta clase contamos con el xpath del elemento buscado , es decir es que se va elemento a elemento buscando el item que tiene exactamente el mismo nombre._
-_En esta calse se maneje el metodo get del atributo pero tambien el metodo set, dado que se va a necesitar porque se maneja la busqueda de diferentes elementos, el metodo set recibre como parametro el String producto_
+_Esta es la clase que le pertenece a la página después de darle clic al botón de lupa, es decir es la página en donde nos aparecen todos los productos con el nombre ingresado_
+_En esta clase contamos con el xpath del elemento buscado, es decir es que se va elemento a elemento buscando el ítem que tiene exactamente el mismo nombre._
+_En esta clase se maneje el método get del atributo, pero también el método set, dado que se va a necesitar porque se maneja la búsqueda de diferentes elementos, el método set recibe como parámetro el String producto_
 
 ```
   
@@ -197,9 +199,9 @@ _En esta calse se maneje el metodo get del atributo pero tambien el metodo set, 
 
 #### Clase PgVisualizarItem
 
-_Esta es la clase que le pertenece a la pagina en donde podemos visualizar el item y todos sus detalles, en esta clase manejamos los xpath de txtItemSeleccionado el cual obtiene el nombre del item, el btnAnadirAlCarrito el cual es el boton para poder añadir el producto al carrito de compras y por ultimo , el btn Seguir comprando, porque una vez que le damos click a añadir al carrito , se despliega una pagina modal , al cual debemos indicar si queremos ir al carrito para terminar nuestra compra o si quieres seguir buscando Items para añadirlo al carrito_
+_Esta es la clase que le pertenece a la pagina en donde podemos visualizar el ítem y todos sus detalles, en esta clase manejamos los xpath de txtItemSeleccionado el cual obtiene el nombre del ítem, el btnAnadirAlCarrito el cual es el botón para poder añadir el producto al carrito de compras y por último , el botón Seguir comprando, porque una vez que le damos clic a añadir al carrito, se despliega una página modal, al cual debemos indicar si queremos ir al carrito para terminar nuestra compra o si quieres seguir buscando Ítems para añadirlo al carrito_
 
-_En esta clase tambien estamos manejando un metodo set para el txtItemSeleccioando dado que debemos automatizar la buqueda del nombre del producto, este metodo set recibe como parametro un String el cual debe contener el nombre del producto buscado_
+_En esta clase también estamos manejando un método set para el txtItemSeleccioando dado que debemos automatizar la búsqueda del nombre del producto, este método set recibe como parámetro un String el cual debe contener el nombre del producto buscado_
 
 ```
   
@@ -232,11 +234,12 @@ _En esta clase tambien estamos manejando un metodo set para el txtItemSeleccioan
 ```
 
 ### Paquete Steps
-El paquete steps en en donde se crean todos los metodos , como estamos usando el mode POM , que ve a las apginas como objetos , entonces cada pagina va a tener sus metodos
+_El paquete steps en donde se crean todos los métodos , como estamos usando el modelo POM , que ve a las páginas como objetos , entonces cada página va a tener sus métodos_
 #### Clase InicioSteps
 
 ##### Metodo abrirPagina
-_Este metodo abre el navegador en la Pagina de https://www.linio.com.co/_
+_Este método abre el navegador en la Página de https://www.linio.com.co/_
+
 ```
     public void  abrirPagina(){
         GoogleChromeDriver.ChromeDriver("https://www.linio.com.co/");
@@ -253,7 +256,7 @@ _Metodo para cerrar el navegador usando el metodo quit()_
 ```
 
 ##### Metodo buscarItem
-_Metodo el cual recibe un String como parametro, este metodo coloca nuestro parametro en la barra de busqueda de producto de Linio y le da Click, una vez carge la pagina con todos los productos con un nombre similar, le va a dar click al producto el cual tenga exactamente el mismo nombre que le pasamos como parametro_
+_Metodo el cual recibe un String como parámetro, este método coloca nuestro parámetro en la barra de búsqueda de producto de Linio y le da Clic, una vez cargue la página con todos los productos con un nombre similar, le va a dar clic al producto el cual tenga exactamente el mismo nombre que le pasamos como parámetro_
 
 ```
 public void buscarItem(String item) {
@@ -264,7 +267,7 @@ public void buscarItem(String item) {
 ```
 
 ##### Metodo buscarAnadirItem
-_Este metodo hace llamado a los metodos buscarItem y AnadirAlCarrito con el fin de introducirlos en un ciclo for, el cual va a leer el archivo excel y repetira la accion de buscar el item, verificar que el nombre del item sea el mismo del archivo excel y por ultimo añadirlo al carrito, asi con cada item que se encuentre en el archivo excel_
+_Este método hace llamado a los métodos buscarItem y AnadirAlCarrito con el fin de introducirlos en un ciclo for, el cual va a leer el archivo Excel y repetirá la acción de buscar el ítem, verificar que el nombre del ítem sea el mismo del archivo Excel y por último añadirlo al carrito, así con cada ítem que se encuentre en el archivo Excel_
 ```
 public void buscarAnadirItem() throws IOException, InterruptedException {
         for (int i = 0 ; i < lecturaExcel.leerDatosDeHojaDeExcel("Productos.xlsx", "Hoja1").size() ; i++ ){
@@ -279,7 +282,8 @@ public void buscarAnadirItem() throws IOException, InterruptedException {
 
 ##### Metodo encontrarItem
 
-_Este metodo lo que hace es que busca el item que le pasemos como parametro, el parametro es un String item, y una vez encuentre dentro de la lista de productos de la pagina , el producto el cual tenga exactamente el mismo nombre le dará click_
+_Este método lo que hace es que busca el ítem que le pasemos como parámetro, el parámetro es un String ítem, y una vez encuentre dentro de la lista de productos de la página , el producto el cual tenga exactamente el mismo nombre le dará clic_
+
 ```
   public void encontrarItem(String item){
         pgBusquedaItem.setTxtElementoBuscado(item);
@@ -290,7 +294,7 @@ _Este metodo lo que hace es que busca el item que le pasemos como parametro, el 
 #### Clase VisualizarItemSteps
 
 ##### Metodo validarNombre
-_La intencion de este metodo es validar , si el nombre del producto encontrado, coincide con el nombre que le pasemos como parametro, el parametro es un String con el nombre nombreEsperado y se hace una validacion con un assertEquals , en donde el parametro nombreEsperado es el valor esperado , y el valor actual lo obtenemos directamente del xpath._
+_La intención de este método es validar , si el nombre del producto encontrado, coincide con el nombre que le pasemos como parámetro, el parámetro es un String con el nombre nombreEsperado y se hace una validación con un assertEquals , en donde el parámetro nombreEsperado es el valor esperado , y el valor actual lo obtenemos directamente del xpath._
 ```
   public void validarNombre(String nombreEsperado){
         pgVisualizarItem.setTxtItemSeleccionado(nombreEsperado);
@@ -301,7 +305,7 @@ _La intencion de este metodo es validar , si el nombre del producto encontrado, 
 ```
 
 ##### Metodo anadirAlCarrito
-_Este metodo lo que hace es darle click al boton anadir al carrito y hacer un espera de 0.5 segundos para arle tiempo a la ventana modal que cargue y darle click al boton seguir comprando_
+_Este método lo que hace es darle clic al botón añadir al carrito y hacer una espera de 0.5 segundos para darle tiempo a la ventana modal que cargue y darle clic al botón seguir comprando_
 
 ```
  public void anadirAlCarrito() throws InterruptedException {
@@ -316,7 +320,8 @@ _Este metodo lo que hace es darle click al boton anadir al carrito y hacer un es
 #### Clase CarritoSteps
 
 ##### Metodo abrirCarrito
-_Este metodo da click al boton del carrito para que cargue esta pagina_
+_Este método da clic al botón del carrito para que cargue esta página_
+
 ```
 public void abrirCarrito() {
         GoogleChromeDriver.driver.findElement(pgCarrito.getBtnAbrirCarrito()).click();
@@ -324,7 +329,8 @@ public void abrirCarrito() {
 ```
 
 ##### Metodo validarValorTotal
-_Este metodo , con un asserEquals , comparamos el valor total que nso da la pagina, con el valor total esperado, el valor total esperado se obtienen mediante el parametro String valor , el cual es el unico parametro que recive este metodo_
+_Este método , con un assertEquals , comparamos el valor total que nos da la página, con el valor total esperado, el valor total esperado se obtienen mediante el parámetro String valor , el cual es el único parámetro que recibe este método_
+
 
 ```
 public void   validarValorTotal(String valor) {
@@ -334,7 +340,8 @@ public void   validarValorTotal(String valor) {
 
 ### Paquete feature
 ####  LinioComprador.feature
-_Este pague incluye el feature Linio comprandor en donde trae el Scenario , el Given , When y Then_
+_Este paquete incluye el feature Linio comprador en donde trae el Scenario , el Given , When y Then_
+
 
 ```
 Feature: HU-01 Busqueda de un grupo de productos en Linio para añadirlos al carrito
@@ -351,12 +358,13 @@ Feature: HU-01 Busqueda de un grupo de productos en Linio para añadirlos al car
 ```
 
 ### Paquete stepsDefinitons
-_Con el archivo feautre obtenemos los nombres del @Given , @When y @Then_
+_Con el archivo feauture obtenemos los nombres del @Given, @When y @Then_
+
 
 #### Clase BuscadorStepsDefinitons
 
 ##### @Given("^que busco un producto en linio$")
-_El metodo que se usa en el given es el queBuscoUnProductoEnLinio() el cual llama al metodo abrirPagina de una instacia de la clase inicioSteps_
+_El método que se usa en el given es el queBuscoUnProductoEnLinio() el cual llama al método abrirPagina de una instancia de la clase inicioSteps_
 ```
  @Given("^que busco un producto en linio$")
     public void queBuscoUnProductoEnLinio() {
@@ -367,7 +375,7 @@ _El metodo que se usa en el given es el queBuscoUnProductoEnLinio() el cual llam
 
 
 ##### @When("^podre anadir el producto al carrito$")
-_El metodo que encontramos es el podreAnadirElProductoAlCarrito() el cual llama a buscarAnadirItem de una instacia de la clase inicioSteps_
+_El método que encontramos es el podreAnadirElProductoAlCarrito() el cual llama a buscarAnadirItem de una instancia de la clase inicioSteps_
 
 ```
 @When("^podre anadir el producto al carrito$")
@@ -377,8 +385,8 @@ _El metodo que encontramos es el podreAnadirElProductoAlCarrito() el cual llama 
 
 ```
 ##### @Then("^Podre ver la pagina del carrito en pantalla$")
-_Por parte del Then , tenemos el metodo podreVerLaPaginaDelCarritoEnPantalla()_
-_En cuanto al metodo podreVerLaPaginaDelCarritoEnPantalla() , este hace llamado a otros 3 metodos en su cuerpo, primero tenemos el metodo abrirCarrito y validarTotal, ambos de la clase carritoSteps, y por ultimo el metodo cerrarPagina de la clase inicioSteps_
+_Por parte del Then , tenemos el método podreVerLaPaginaDelCarritoEnPantalla()_
+_En cuanto al método podreVerLaPaginaDelCarritoEnPantalla() , este hace llamado a otros 3 métodos en su cuerpo, primero tenemos el método abrirCarrito y validarTotal, ambos de la clase carritoSteps, y por último el método cerrarPagina de la clase inicioSteps_
 
 ```
  @Then("^Podre ver la pagina del carrito en pantalla$")
@@ -390,7 +398,7 @@ _En cuanto al metodo podreVerLaPaginaDelCarritoEnPantalla() , este hace llamado 
 ```
 
 ### Paquete runner
-_El paquete runner , como su nombre lo indica es que el correra la prueba_ , en este paquete encontraremos la clase BuscadorRunner.
+_El paquete runner , como su nombre lo indica es que el correrá la prueba_ , en este paquete encontraremos la clase BuscadorRunner.
 
 #### Clase buscador runner
 _Aca llamamos a @RunWith(CucumberWithSerenity.class) y a @CucumberOptions el cual va a manejar 3 opciones, features que es el archivo .features que tenemos creado con el nombre LinioComprado.feature, entonces en features ponemos la ruta en donde se encuentra este archivo, el glue va a hacer nuestro archivo StepsDefiniots , porque ejecutará los metodos alli y por ultimo usamos snippets , el cual le dara el formato a nuestro codigo , es esta ocasion usaremos CAMELCASE , porque todo el proyecto esta asi y es para que no pierda ese sentido , el camilecase es el tipo de guardado de varibles y metodos , un ejemplo seria el siguientes esteEsUnMetodo , en donde cada palabra inicia con mayuscula
@@ -410,7 +418,7 @@ public class BuscadorRunner {
 
 ```
 
-# Esto seria todo por parte del proyecto de automatizacion a la pagina Linio, gracias por la atencion prestada! 
+# Esto sería todo por parte del proyecto de automatización a la página Linio, gracias por la atención prestada! 
 
 
 
