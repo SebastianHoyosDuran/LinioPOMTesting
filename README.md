@@ -401,7 +401,7 @@ _En cuanto al método podreVerLaPaginaDelCarritoEnPantalla() , este hace llamado
 _El paquete runner , como su nombre lo indica es que el correrá la prueba_ , en este paquete encontraremos la clase BuscadorRunner.
 
 #### Clase buscador runner
-_Esta clase puede parecer algo dificil pero como tal solo nos interesan el features y el glue, en donde el feautures solo vamos a poner la ruta de nuestro archivo y el apartado de glue , el donde vamos a poner nuestra clases de stepsDefinitions, es nuestra clase ejecutadora, es en donde almacenamos todas las intrucciones para que nuestra automatizacion las ejecute._
+_Esta clase puede parecer algo dificil pero como tal solo nos interesan el features y el glue, en donde el feautures solo vamos a poner la ruta de nuestro archivo y el apartado de glue , en donde vamos a poner nuestra clases de stepsDefinitions, es nuestra clase ejecutadora, es en donde almacenamos todas las intrucciones para que nuestra automatizacion las ejecute._
 
 ```
 @RunWith(CucumberWithSerenity.class)
