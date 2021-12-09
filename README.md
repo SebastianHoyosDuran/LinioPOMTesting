@@ -401,7 +401,7 @@ _En cuanto al método podreVerLaPaginaDelCarritoEnPantalla() , este hace llamado
 _El paquete runner , como su nombre lo indica es que el correrá la prueba_ , en este paquete encontraremos la clase BuscadorRunner.
 
 #### Clase buscador runner
-_Aca llamamos a @RunWith(CucumberWithSerenity.class) y a @CucumberOptions el cual va a manejar 3 opciones, features que es el archivo .features que tenemos creado con el nombre LinioComprado.feature, entonces en features ponemos la ruta en donde se encuentra este archivo, el glue va a hacer nuestro archivo StepsDefiniots , porque ejecutará los metodos alli y por ultimo usamos snippets , el cual le dara el formato a nuestro codigo , es esta ocasion usaremos CAMELCASE , porque todo el proyecto esta asi y es para que no pierda ese sentido , el camilecase es el tipo de guardado de varibles y metodos , un ejemplo seria el siguientes esteEsUnMetodo , en donde cada palabra inicia con mayuscula
+_Esta clase puede parecer algo dificil pero como tal solo nos interesan el features y el glue, en donde el feautures solo vamos a poner la ruta de nuestro archivo y el apartado de glue , el donde vamos a poner nuestra clases de stepsDefinitions, es nuestra clase ejecutadora, es en donde almacenamos todas las intrucciones para que nuestra automatizacion las ejecute._
 
 ```
 @RunWith(CucumberWithSerenity.class)
