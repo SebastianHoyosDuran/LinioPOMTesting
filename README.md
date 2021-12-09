@@ -1,5 +1,5 @@
 # RetoSQALinio
-Este proyecto es realizado con la intención de poner en práctica los conocimientos adquiridos por en el semillero de automatización de pruebas impartido por la empresa SQA.
+Este proyecto es realizado con la intención de poner en práctica los conocimientos adquiridos en el semillero de automatización de pruebas impartido por la empresa SQA.
 
 ## Importante !
 Linio es una página muy dinámica, con muchos cambios, lo que quiero decir con este es que al día que se desarrolló esta prueba no había ningún mensaje emergente acerca de una promoción o evento, si al momento de realizar esta prueba hay una ventana emergente, muy seguramente dará fallo. También sus productos tienen demasiado movimiento, puede que algún producto de la lista, deje de haber stock, cambie de nombre, cambie de precio. Cualquier cambio en algún producto puede generar falla en la prueba.
