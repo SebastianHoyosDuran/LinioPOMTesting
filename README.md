@@ -42,27 +42,6 @@ _Antes de continuar, me gustaría añadir que grabé un video explicando la prue
 * [Video](https://youtu.be/XwREPo-XmYg) - Presentación del proyecto
 * [![Alt text](https://img.youtube.com/vi/XwREPo-XmYg/0.jpg)](https://www.youtube.com/watch?v=XwREPo-XmYg)
 
-
-### Acerca de los pasos que realiza la automatizacion:
-_Para la automatización los métodos principales(Digo principales porque estos a su vez son un conjunto de métodos que se unen para completar 
-con la funcionalidad) empleados son los siguientes:_
-```
-Abrir el navegador de Chrome y abrir la pagina de linio (https://www.linio.com.co/)
-Abrir el archivo Excel en donde esta la lista de los nombres de los productos y repetir las siguientes acciones con cada uno de los producto:
-    * Colocar el nombre del producto en la barra buscador
-    * Daler click en la lupa para que busque el producto
-    * En la ventana en donde aparecen todos los productos con el nombre similar , buscar el producto que tenga exactamente el mismo nombre que copiamos en la barra de busqueda , incluso con la misma cantidad de espacios
-    * Darle click al producto encontrado
-    * En la pagina del producto , obtener su nombre y compararlo con el nombre obtenido del excel
-    * Darle click al boton de añadir al carrito
-    * Cuando se despliegue la ventana modal confirmando que el producto se añadió al carrito, darle click al boton de seguir comprando para que se repita el proceso
-Una vez se haya hecho el proceso anterior con todos los producto, se le da click al carrito
-Una vez en la pagina del carrito , buscamos mediante el xpath el valor total de la compra y hacemos una validacion, que este valor tiene que ser exactamente con el valor que se le ingresa como parametro
-```
-
-_Si todos los pasos anteriormente mencionados se cumplen sin ningún contratiempo , quiere decir que la prueba se ha realizado con éxito y sin errores._
-
-
 ## Paquetes, Clases y Metodos:
 _A continuación mostraremos los códigos y de las clases a que paquete pertenecen y cuál es su función_
 
